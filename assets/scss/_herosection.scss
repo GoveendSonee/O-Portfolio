@@ -1,0 +1,32 @@
+section#hero-section {
+    background: $c;
+    padding: 3rem 0;
+    & .card.mb-3 {
+        background-color: $c;
+        border: none;
+        border-radius: 0;
+        & .card-body {
+            padding: 2rem 2rem;
+            & h1.card-title {
+                color: $bc1;
+                margin: 0 0 2rem 0;
+                overflow: hidden;
+                animation-duration: 3s;
+                & span {
+                    color: $bc1;
+                }
+            }
+            & p.card-text {
+                font-size: 1.12rem;
+                margin-bottom: 5rem;
+                font-weight: 600;
+                color: $c3;
+                overflow: hidden;
+            }
+            
+        }
+    }
+    & .carousel-control-prev, .carousel-control-next{
+        width: 0%!important;
+    }
+}

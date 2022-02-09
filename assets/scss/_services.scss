@@ -1,0 +1,98 @@
+section#services {
+    & h5.head {
+        text-align: center;
+        padding: 2rem;
+        &:before {
+            content: "";
+            display: block;
+            width: 120px;
+            height: 3px;
+            background: $bc1;
+            left: 33%;
+            position: absolute;
+          }
+          
+          &:after {
+            content: "";
+            display: block;
+            width: 120px;
+            height: 3px;
+            background: #000;
+            right: 33%;
+            position: absolute;
+          }
+    }
+    & .row{
+        & .col-lg-6.col-md-6.col-sm-12 {
+            & .heading {
+                text-transform: capitalize;
+                position: relative;
+                display: block;
+                font-size: 2.3rem;
+                line-height: 4rem;
+                color: $c2;
+                font-weight: 700;
+                font-family: $f3;
+                padding: 1rem;
+                border: 4px solid $b;
+                text-align: center;
+                & span{
+                    color: $bc1;
+                    border-bottom: 5px solid $bc1;
+                    border-radius: 50%;
+                }
+            }
+            & p.desc {
+                color: $c4;
+                font-size: larger;
+                text-align: justify;
+                margin: 1rem;
+                font-family: $f1;
+            }
+        }
+    }
+
+    & .row.provides {
+        margin: 4rem 0 2rem 0;
+        & .col-lg-4.col-md-6.col-sm-12 {
+            margin: 1rem 0;
+            & .card {
+                color:  $c1;
+                border: none;
+                transition: ease-in-out 4s;
+                & .icons {
+                    text-align: center;
+                    font-size: 6rem;
+                    color: $c5;
+                    padding: 0 0 17px;
+                    &:hover{
+                        color: $c;
+                        transition: ease-in-out 2s;
+                    }
+                }
+                & h5.card-title {
+                    text-align: center;
+                    font-size: large;
+                    font-weight: 700;
+                    transition: ease-in-out 4s;
+                }
+                & p.card-text {
+                    height: 9rem;
+                    overflow: hidden;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 400;
+                    font-family: $f4;
+                    background-position: center top;
+                    padding: 18px 0 0 0;
+                    font-weight: 600;
+                }
+                &:hover{
+                    background: $bc1;
+                    color: $c;
+                    transition: ease-in-out 3s;
+                }
+            }
+        }
+    }
+}

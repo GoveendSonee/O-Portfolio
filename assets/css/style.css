@@ -1,0 +1,709 @@
+/* Theme Description
+-------------------------------------------------
+
+	  Theme Name: Govind Sah
+	  Author: Govind Sah uff Goveend Sonee 
+	  Description: Portfolio Website ( Bootstrap-5 / HTML / SCSS-CSS / React JS / Developed Under WordPress 
+	  Version: 1.0
+	  
+------------------------------------------------- 
+*/
+/* CSS Index
+-------------------------------------------------
+ 
+	1. Theme default CSS
+	2. Header
+
+
+-------------------------------------------------
+*/
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+#loader {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #fff url("../img/dash.gif") no-repeat center;
+  z-index: 9999;
+}
+
+.container {
+  padding: 3rem 0;
+}
+
+.button {
+  padding: 3rem;
+  text-align: center;
+}
+
+.button .btn-primary {
+  background-color: #666 !important;
+  border-color: #666 !important;
+  font-family: cursive;
+  border: 4px solid #fff !important;
+}
+
+.button .btn-primary:hover {
+  background-color: #76ac30 !important;
+  border-color: #76ac30 !important;
+  -webkit-transition: all 3s;
+  transition: all 3s;
+  border: 4px solid #fff !important;
+}
+
+.progress-bar {
+  background-color: #76ac30 !important;
+  -webkit-transition: width 5s ease;
+  transition: width 5s ease;
+}
+
+h5.head {
+  text-align: center;
+  padding: 2rem;
+}
+
+h5.head:before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: #76ac30 !important;
+  left: 33%;
+  position: absolute;
+}
+
+h5.head:after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: #000;
+  right: 33%;
+  position: absolute;
+}
+
+/* Start Nav-Menu Header */
+nav {
+  background: #fff !important;
+  color: #fff !important;
+  font-size: large;
+  font-weight: 700;
+  height: 5rem;
+  -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+          animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav label.logo {
+  font-size: 2rem;
+  line-height: 5rem;
+  padding: 0 6rem;
+  font-weight: bold;
+}
+
+nav label.logo img {
+  height: 5rem;
+  padding: 5px;
+}
+
+nav ul {
+  float: right;
+  line-height: 5rem;
+  margin-right: 2rem;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+nav ul li a {
+  color: #76ac30 !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 3px 13px;
+}
+
+nav ul li a:hover {
+  color: #76ac30 !important;
+  text-decoration: none;
+  background-color: #f5ffe9 !important;
+  -webkit-transition: ease-in-out 3s;
+  transition: ease-in-out 3s;
+  border-bottom: 0.6rem solid #76ac30 !important;
+}
+
+nav input#check {
+  display: none;
+}
+
+nav label.checkbtn {
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1160px) {
+  /*Big smartphones [900px -> 1160px]*/
+  nav ul li a {
+    padding: 7px 1px;
+    border-radius: 3px 8px;
+    font-size: initial;
+  }
+}
+
+@media only screen and (max-width: 1026px) {
+  /*Tablets [900px -> 1026px]*/
+  nav {
+    height: 4rem;
+  }
+  nav label.logo {
+    font-size: 1.5rem;
+    line-height: 4rem;
+    padding: 0 3rem;
+    font-weight: 700;
+  }
+  nav ul {
+    float: right;
+    line-height: 4rem;
+    margin-right: 1.2rem;
+  }
+  nav ul li {
+    margin: 0 1px;
+  }
+  nav ul li a {
+    color: #76ac30 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px 13px;
+  }
+  nav ul li a:hover {
+    color: #76ac30 !important;
+    text-decoration: none;
+    background-color: #f5ffe9 !important;
+    -webkit-transition: ease-in-out 3s;
+    transition: ease-in-out 3s;
+    border-bottom: 0.3rem solid #76ac30 !important;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  /*Big smartphones [900px -> 980px]*/
+  nav ul li {
+    margin: 0 1px;
+  }
+  nav ul li a {
+    padding: 7px 1px;
+    border-radius: 3px 7px;
+    font-size: initial;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /*Big smartphones [426px -> 900px]*/
+  nav label.logo {
+    font-size: 2rem;
+    padding-left: 50px;
+    line-height: 4rem;
+  }
+  nav label.logo img {
+    height: 4rem;
+    padding: 5px;
+  }
+  nav label.checkbtn {
+    display: block;
+    float: right;
+    font-size: 2rem;
+    padding-right: 50px;
+    line-height: 4rem;
+  }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #60da47 !important;
+    top: 4rem;
+    left: -100%;
+    text-align: center;
+    -webkit-transition: 6s;
+    transition: 6s;
+    border-radius: 0 0 60%;
+  }
+  nav ul li {
+    display: block;
+  }
+  nav ul li a {
+    font-size: 1rem;
+    color: #fff !important;
+  }
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
+}
+
+/* End Nav-Menu Header */
+section#hero-section {
+  background: #fff !important;
+  padding: 3rem 0;
+}
+
+section#hero-section .card.mb-3 {
+  background-color: #fff !important;
+  border: none;
+  border-radius: 0;
+}
+
+section#hero-section .card.mb-3 .card-body {
+  padding: 2rem 2rem;
+}
+
+section#hero-section .card.mb-3 .card-body h1.card-title {
+  color: #76ac30 !important;
+  margin: 0 0 2rem 0;
+  overflow: hidden;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+section#hero-section .card.mb-3 .card-body h1.card-title span {
+  color: #76ac30 !important;
+}
+
+section#hero-section .card.mb-3 .card-body p.card-text {
+  font-size: 1.12rem;
+  margin-bottom: 5rem;
+  font-weight: 600;
+  color: #876f19 !important;
+  overflow: hidden;
+}
+
+section#hero-section .carousel-control-prev, section#hero-section .carousel-control-next {
+  width: 0% !important;
+}
+
+section#about {
+  background: #292929 !important;
+  color: #f5ffe9 !important;
+}
+
+section#about .card {
+  background-color: #292929 !important;
+  border: none;
+}
+
+section#about .card .heading {
+  font-weight: bolder;
+  font-size: 4rem;
+  text-transform: capitalize;
+  padding-bottom: 2rem;
+}
+
+section#about .card .heading span {
+  color: #76ac30 !important;
+}
+
+section#about .card .row.describe .col-lg-4.col-sm-12 img.card-img-top {
+  height: 24rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid #76ac30 !important;
+  -webkit-transition: ease-in-out 4s;
+  transition: ease-in-out 4s;
+}
+
+section#about .card .row.describe .col-lg-4.col-sm-12 img.card-img-top:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+section#about .card .row.describe .col-lg-8.col-sm-12 {
+  margin: auto;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+section#about .card .row.describe .col-lg-8.col-sm-12 .card-body {
+  color: #f5ffe9 !important;
+  font-size: larger;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 650px) {
+  /*Small smartphones [325px -> 650px]*/
+  section#about .card .heading {
+    font-size: 1.54rem;
+    padding-bottom: 1rem;
+  }
+}
+
+section#services h5.head {
+  text-align: center;
+  padding: 2rem;
+}
+
+section#services h5.head:before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: #76ac30 !important;
+  left: 33%;
+  position: absolute;
+}
+
+section#services h5.head:after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: #000;
+  right: 33%;
+  position: absolute;
+}
+
+section#services .row .col-lg-6.col-md-6.col-sm-12 .heading {
+  text-transform: capitalize;
+  position: relative;
+  display: block;
+  font-size: 2.3rem;
+  line-height: 4rem;
+  color: #292929 !important;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  padding: 1rem;
+  border: 4px solid #efefef !important;
+  text-align: center;
+}
+
+section#services .row .col-lg-6.col-md-6.col-sm-12 .heading span {
+  color: #76ac30 !important;
+  border-bottom: 5px solid #76ac30 !important;
+  border-radius: 50%;
+}
+
+section#services .row .col-lg-6.col-md-6.col-sm-12 p.desc {
+  color: #c7a79f !important;
+  font-size: larger;
+  text-align: justify;
+  margin: 1rem;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+section#services .row.provides {
+  margin: 4rem 0 2rem 0;
+}
+
+section#services .row.provides .col-lg-4.col-md-6.col-sm-12 {
+  margin: 1rem 0;
+}
+
+section#services .row.provides .col-lg-4.col-md-6.col-sm-12 .card {
+  color: #666 !important;
+  border: none;
+  -webkit-transition: ease-in-out 4s;
+  transition: ease-in-out 4s;
+}
+
+section#services .row.provides .col-lg-4.col-md-6.col-sm-12 .card .icons {
+  text-align: center;
+  font-size: 6rem;
+  color: #403221 !important;
+  padding: 0 0 17px;
+}
+
+section#services .row.provides .col-lg-4.col-md-6.col-sm-12 .card .icons:hover {
+  color: #fff !important;
+  -webkit-transition: ease-in-out 2s;
+  transition: ease-in-out 2s;
+}
+
+section#services .row.provides .col-lg-4.col-md-6.col-sm-12 .card h5.card-title {
+  text-align: center;
+  font-size: large;
+  font-weight: 700;
+  -webkit-transition: ease-in-out 4s;
+  transition: ease-in-out 4s;
+}
+
+section#services .row.provides .col-lg-4.col-md-6.col-sm-12 .card p.card-text {
+  height: 9rem;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  background-position: center top;
+  padding: 18px 0 0 0;
+  font-weight: 600;
+}
+
+section#services .row.provides .col-lg-4.col-md-6.col-sm-12 .card:hover {
+  background: #76ac30 !important;
+  color: #fff !important;
+  -webkit-transition: ease-in-out 3s;
+  transition: ease-in-out 3s;
+}
+
+section#portfolio {
+  background: #292929 !important;
+  color: #f5ffe9 !important;
+}
+
+section#portfolio .card.text-center {
+  border: none;
+  background: #292929 !important;
+  color: #f5ffe9 !important;
+}
+
+section#portfolio .card.text-center .heading {
+  font-weight: bolder;
+  font-size: 4rem;
+  text-transform: capitalize;
+  padding-bottom: 2rem;
+}
+
+section#portfolio .card.text-center .heading span {
+  color: #76ac30 !important;
+}
+
+section#portfolio .card.text-center .row.portfolio .col-lg-6.col-md-6.col-sm-12, section#portfolio .card.text-center .row.portfolio .col-lg-4.col-md-6.col-sm-12 {
+  margin: 1rem 0;
+}
+
+section#portfolio .card.text-center .row.portfolio .col-lg-6.col-md-6.col-sm-12 .card.bg-dark.text-white img.card-img, section#portfolio .card.text-center .row.portfolio .col-lg-4.col-md-6.col-sm-12 .card.bg-dark.text-white img.card-img {
+  height: 22rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  -webkit-transition: ease-in-out 13s;
+  transition: ease-in-out 13s;
+}
+
+section#portfolio .card.text-center .row.portfolio .col-lg-6.col-md-6.col-sm-12 .card.bg-dark.text-white img.card-img:hover, section#portfolio .card.text-center .row.portfolio .col-lg-4.col-md-6.col-sm-12 .card.bg-dark.text-white img.card-img:hover {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+section#portfolio .card.text-center .row.portfolio .col-lg-6.col-md-6.col-sm-12 .card.bg-dark.text-white h5.card-title, section#portfolio .card.text-center .row.portfolio .col-lg-4.col-md-6.col-sm-12 .card.bg-dark.text-white h5.card-title {
+  font-size: 1.6rem;
+  color: #76ac30 !important;
+  font-family: cursive;
+  text-decoration: overline;
+  padding-top: 2rem;
+}
+
+section#portfolio .card.text-center .row.portfolio .col-lg-6.col-md-6.col-sm-12 .card.bg-dark.text-white p.card-text, section#portfolio .card.text-center .row.portfolio .col-lg-4.col-md-6.col-sm-12 .card.bg-dark.text-white p.card-text {
+  color: white;
+  font-family: cursive;
+  padding-bottom: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: large;
+}
+
+section#portfolio .card.text-center .row.portfolio .col-lg-6.col-md-6.col-sm-12 .card.bg-dark.text-white p.card-text span, section#portfolio .card.text-center .row.portfolio .col-lg-4.col-md-6.col-sm-12 .card.bg-dark.text-white p.card-text span {
+  color: #ab8787;
+}
+
+@media only screen and (max-width: 650px) {
+  /*Small smartphones [325px -> 650px]*/
+  section#portfolio .card.text-center .heading {
+    font-size: 1.54rem;
+  }
+}
+
+section#blog .card.text-center {
+  border: none;
+}
+
+section#blog .card.text-center .heading {
+  text-transform: capitalize;
+  position: relative;
+  font-size: 40px;
+  line-height: 46px;
+  color: #292929 !important;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+}
+
+section#blog .card.text-center .heading span {
+  color: #76ac30 !important;
+}
+
+section#blog .card.text-center .row.blog .col-lg-3.col-md-6.col-sm-12 {
+  margin: 1rem 0;
+}
+
+section#blog .card.text-center .row.blog .col-lg-3.col-md-6.col-sm-12 .card-body {
+  border: 3px solid #f5ffe9 !important;
+  -webkit-box-shadow: 8px 10px #f1dada !important;
+          box-shadow: 8px 10px #f1dada !important;
+}
+
+section#blog .card.text-center .row.blog .col-lg-3.col-md-6.col-sm-12 .card-body h5.card-title {
+  font-weight: 800;
+  font-size: large;
+  font-family: cursive;
+  color: #ec2825 !important;
+  height: 2.9rem;
+  overflow: hidden;
+}
+
+section#blog .card.text-center .row.blog .col-lg-3.col-md-6.col-sm-12 .card-body p.card-text {
+  height: 10rem;
+  overflow: auto;
+  text-align: justify;
+  padding: 1rem;
+  -webkit-box-shadow: 5px 6px #c7a79f !important;
+          box-shadow: 5px 6px #c7a79f !important;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+@media only screen and (max-width: 650px) {
+  /*Small smartphones [325px -> 650px]*/
+}
+
+section#ping .card.text-center {
+  border: none;
+}
+
+section#ping .card.text-center .heading {
+  font-size: 3rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+section#ping .card.text-center .heading span {
+  color: #76ac30 !important;
+}
+
+section#ping .card.text-center .row.ping .col-lg-8.col-md-8.col-sm-12 .card {
+  border: none;
+  -webkit-box-shadow: 0px 8px 1px 5px #e7dada;
+          box-shadow: 0px 8px 1px 5px #e7dada;
+}
+
+section#ping .card.text-center .row.ping .col-lg-8.col-md-8.col-sm-12 .card form {
+  margin: 3rem;
+}
+
+section#ping .card.text-center .row.ping .col-lg-8.col-md-8.col-sm-12 .card form .form-control {
+  border: 4px solid #ffebe4;
+  font-family: cursive;
+}
+
+@media only screen and (max-width: 650px) {
+  /*Small smartphones [325px -> 650px]*/
+  section#ping .card.text-center .heading {
+    font-size: 1.53rem;
+  }
+}
+
+section#branding .row .col-lg-6.col-md-6.col-sm-12 .heading {
+  text-transform: capitalize;
+  position: relative;
+  display: block;
+  font-size: 2.3rem;
+  line-height: 4rem;
+  color: #292929 !important;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  padding: 1rem;
+  border: 4px solid #efefef !important;
+  text-align: center;
+}
+
+section#branding .row .col-lg-6.col-md-6.col-sm-12 .heading span {
+  color: #76ac30 !important;
+  border-bottom: 5px solid #76ac30 !important;
+  border-radius: 50%;
+}
+
+section#branding .row .col-lg-6.col-md-6.col-sm-12 p.desc {
+  color: #c7a79f !important;
+  font-size: larger;
+  text-align: justify;
+  margin: 1rem;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+section#branding .row .owl-buttons {
+  display: none;
+}
+
+section#branding .row .owl-carousel:hover .owl-buttons {
+  display: block;
+}
+
+section#branding .row .owl-item {
+  text-align: center;
+}
+
+section#branding .row .owl-theme .owl-controls .owl-buttons div {
+  background: transparent;
+  color: #869791;
+  font-size: 40px;
+  line-height: 300px;
+  margin: 0;
+  padding: 0 60px;
+  position: absolute;
+  top: 0;
+}
+
+section#branding .row .owl-theme .owl-controls .owl-buttons .owl-prev {
+  left: 0;
+  padding-left: 20px;
+}
+
+section#branding .row .owl-theme .owl-controls .owl-buttons .owl-next {
+  right: 0;
+  padding-right: 20px;
+}
+
+section#branding .row .owl-carousel .displa-cart .cart {
+  text-align: center;
+  border: 4px solid #666 !important;
+  line-height: 10;
+  margin: 2rem;
+  -webkit-box-shadow: 2px 8px 8px #ec2825 !important;
+          box-shadow: 2px 8px 8px #ec2825 !important;
+}
+
+section#branding .row .owl-carousel .displa-cart .cart img {
+  height: 6rem !important;
+}
+
+section#branding .row .owl-carousel .displa-cart .name {
+  height: 2rem;
+  margin: 2rem;
+}
+
+section#branding .row .owl-carousel .displa-cart .name a.redd {
+  font-size: large;
+  font-weight: bold;
+  background: #76ac30 !important;
+  padding: 9px 8px 1rem 8px;
+  margin: auto;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 57% 100%, 50% 75%, 0% 75%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 57% 100%, 50% 75%, 0% 75%);
+  color: #fff !important;
+  -webkit-transition: ease-in-out 3s;
+  transition: ease-in-out 3s;
+}
+
+section#branding .row .owl-wrapper-outer {
+  margin: -1rem;
+}
